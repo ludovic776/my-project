@@ -95,3 +95,25 @@ body{
     background-color: var(--dark);
     padding: 10px 20px;
 }
+
+
+.cards{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 1.5rem;
+}
+.cards .box{
+    text-align: center;
+    background-color: var(--grey);
+    box-shadow: var(--shadow);
+    padding: 0 2rem;
+}
+.cards i{
+    color: var(--dark);
+    font-size: 4rem;
+    margin: 1.5rem 0 ;
+}
+.cards p{
+    margin: 1rem 0 2rem;
+}
