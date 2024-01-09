@@ -107,7 +107,7 @@ body{
     text-align: center;
     background-color: var(--grey);
     box-shadow: var(--shadow);
-    padding: 0 2rem;
+    padding: 1rem 2rem;
 }
 .cards i{
     color: var(--dark);
@@ -162,4 +162,82 @@ footer{
     color: var(--light);
     text-align: center;
     padding: 30px 0;
+}
+
+
+
+@media screen and (min-width:0px) and (max-width: 500px){
+    body{
+        text-align: left;
+    }
+    .navigation ul{
+        grid-template-columns: 1fr;
+    }
+    .the-basis{
+        grid-template-areas:
+        'showcase' 
+        'top-box-a' 
+        'top-box-b';
+    }
+    .the-basis .showcase{
+        padding: 0;
+    }
+    .the-basis .showcase h1,p{
+        padding-left: 3rem;
+        font-size: 2rem;
+    }
+    .the-basis .showcase a{
+        margin-left: 15%;
+    }
+    .the-basis .mem p ,.pro-mem p{
+        text-align: center;
+        padding-left: 0;
+    }
+    .cards{
+        display: inline-block;
+    }
+    .cards p{
+        font-size: 1rem;
+        padding: 0;
+    }
+    .cards .box {
+        margin-top: 1rem;
+    }
+    .gen{
+        grid-template-columns: 1fr;
+    }
+    .gen .text p{
+        padding-left: 0;
+        font-size: 1rem;
+    }
+    .gen .text a{
+        display: block;
+        text-align: center;
+    }
+    footer p{
+        font-size: 1rem;
+        padding: 0;
+    }
+}
+
+
+@media screen and (min-width:501px) and (max-width: 768px){
+    .navigation ul{
+        grid-template-columns: 1fr;
+    }
+    .the-basis{
+        grid-template-areas:
+        'showcase showcase'
+        'top-box-a top-box-b';
+    }
+    .cards{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .gen{
+        grid-template-columns: 1fr;
+    }
+    .gen a{
+        display: block;
+        text-align: center;
+    }
 }
